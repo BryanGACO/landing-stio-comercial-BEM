@@ -50,11 +50,17 @@ img {
     display: block;
 }
 
-.contenedor {
+[class$="__contenedor"]{
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
 }
+
+/* .contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+} */
 
 /** HEADER **/
 
@@ -82,12 +88,6 @@ img {
     .header {
         background-size: 110rem;
     }
-}
-
-.header__contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-    width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -174,4 +174,53 @@ img {
     .navegacion__link {
         color: var(--blanco)
     }
+}
+
+/** Nucleus **/
+.nucleus{
+    margin-top: 3rem;
+}
+
+.nucleus__heading{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.nucleus__grid{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .nucleus__grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+        align-items: center;
+    }    
+}
+
+.listdo__elemento{
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);  /*que tanto se extiende la sambtra horizontal  */
+    padding: 2rem;
+    margin-bottom: 5rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+
+}
+
+.listdo__elemento:hover{
+    transform: scale(1.1); /*.1 es reducir al 10% -------- 1.1 es aumentar 10%*/
+}
+
+.listado__heading
+{
+    font-size: 3rem;
+    color: var(--primario);
+    margin: 0;
+    text-align: center;
+}
+.listado__texto{
+    margin: 0;
+    font-size: 2rem;
 }
