@@ -50,10 +50,16 @@ img {
     display: block;
 }
 
-[class$="__contenedor"]{
+
+[class$="__contenedor"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
+}
+
+[class$="__heading"] {
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
 /* .contenedor {
@@ -111,17 +117,16 @@ img {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 4rem;
-        align-items: center;        
+        align-items: center;
     }
 }
 
-.header__heading{
-    text-align: center;
+.header__heading {
     font-size: 3rem;
 }
 
 @media (min-width: 768px) {
-    .header__heading{
+    .header__heading {
         text-align: left;
         font-size: 5rem;
         line-height: 1.2;
@@ -129,14 +134,14 @@ img {
 }
 
 @media (min-width: 768px) {
-    .header__imagen{
+    .header__imagen {
         max-width: 30rem;
         margin: 0 auto;
     }
-    
+
 }
 
-.header__boton{
+.header__boton {
     background-color: var(--primario);
     display: block;
     padding: 1rem;
@@ -146,7 +151,7 @@ img {
 }
 
 @media (min-width: 768px) {
-    .header__boton{
+    .header__boton {
         padding: 1rem 3rem;
         display: inline-block;
     }
@@ -166,7 +171,7 @@ img {
     }
 }
 
-.navegacion__link{
+.navegacion__link {
     color: var(--primario);
 }
 
@@ -177,50 +182,99 @@ img {
 }
 
 /** Nucleus **/
-.nucleus{
+.nucleus {
     margin-top: 3rem;
 }
 
-.nucleus__heading{
-    text-align: center;
+.nucleus__heading {
     margin-bottom: 5rem;
 }
 
-.nucleus__grid{
+.nucleus__grid {
     display: flex;
     flex-direction: column-reverse;
 }
 
 @media (min-width: 768px) {
-    .nucleus__grid{
+    .nucleus__grid {
         display: grid;
         grid-template-columns: 1fr 2fr;
         column-gap: 5rem;
         align-items: center;
-    }    
+    }
 }
 
-.listdo__elemento{
-    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);  /*que tanto se extiende la sambtra horizontal  */
+.listdo__elemento {
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);
+    /*que tanto se extiende la sambtra horizontal  */
     padding: 2rem;
     margin-bottom: 5rem;
     transition-property: transform;
     transition-duration: 300ms;
+    background-color: var(--blanco);
 
 }
 
-.listdo__elemento:hover{
-    transform: scale(1.1); /*.1 es reducir al 10% -------- 1.1 es aumentar 10%*/
+.listdo__elemento:hover {
+    transform: scale(1.1);
+    /*.1 es reducir al 10% -------- 1.1 es aumentar 10%*/
 }
 
-.listado__heading
-{
+.listado__heading {
     font-size: 3rem;
     color: var(--primario);
     margin: 0;
-    text-align: center;
 }
-.listado__texto{
+
+.listado__texto {
     margin: 0;
     font-size: 2rem;
+}
+
+
+/**Seguridad**/
+
+.seguridad {
+    background-color: var(--primario);
+    padding: 20rem 0;
+    position: relative;
+    margin: 10rem 0;
+    overflow: hidden;
+}
+
+.seguridad::before,
+.seguridad::after {
+    background-color: var(--blanco);
+    content: '';
+    height: 20rem;
+    width: 130%;
+    position: absolute;
+}
+
+.seguridad::before{
+    top: -10rem;
+    left: 0;
+    transform: rotate(3deg);
+}
+
+.seguridad::after{
+    bottom: -10rem;
+    left: 0;
+    transform: rotate(-3deg);    
+}
+
+
+
+.seguridad__heading {
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .seguridad__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+
 }
