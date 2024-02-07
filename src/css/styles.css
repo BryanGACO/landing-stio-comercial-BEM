@@ -220,10 +220,35 @@ img {
     /*.1 es reducir al 10% -------- 1.1 es aumentar 10%*/
 }
 
+@media (min-width: 768px) {
+    .listado__elemento--2col{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
 .listado__heading {
     font-size: 3rem;
     color: var(--primario);
     margin: 0;
+}
+
+.listado__numero {
+    color:var(--primario);
+    margin:0;
+    font-weight: 900;
+    font-size: 6rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .listado__numero {
+        flex-basis: 20rem;
+        text-align: right;
+        font-size: 4rem;
+    }
 }
 
 .listado__texto {
@@ -263,8 +288,6 @@ img {
     transform: rotate(-3deg);    
 }
 
-
-
 .seguridad__heading {
     color: var(--blanco);
 }
@@ -277,4 +300,32 @@ img {
         align-items: center;
     }
 
+}
+
+/** COMISIONES **/
+@media (min-width: 768px) {
+    .comisiones__grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: flex-end;
+    }    
+}
+
+@media (min-width: 998px) {
+    .comisiones__grid{
+        align-items: center;
+    }   
+}
+
+.comisiones__texto{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .comisiones__texto{
+        text-align: left;
+    }
 }
